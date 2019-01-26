@@ -1,0 +1,86 @@
+<head>
+	<style type="text/css">
+p.pcool{
+	padding-top:5px;
+}
+p.pthrough {
+	margin-top:-15px;
+}
+p.pspread {
+	margin-top:0px;
+	padding-top:5px;
+	padding-bottom:2px;
+	padding-left:40px;
+}
+body{
+	background-image: url("drinks.jpg");
+	background-repeat: no-repeat;
+	margin-top: 8px;
+	margin-left: 8px;
+	background-position: 8px 138px;
+  
+}
+.cooldown {
+	width:648px;
+	height:130px;
+	background-color: #c93042; 
+	color: white;
+	text-align: center;
+	margin: 0px;  
+	padding-top: 0px;
+}
+
+.justprint {
+	position: relative;
+	left: 365px;
+	top: 25px;
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+	font-family: "helvetica";
+	width:220px;
+	height:225px;
+	background-color: #f6485f; 
+	color: white;
+	text-align: left;
+	padding: 7px 15px;
+}
+.spreadword {
+	position: relative;
+	left: 15px;
+	border-radius: 10px;
+	font-family: "Times New Roman";
+	width:190px;
+	height:55px;
+	background-color: #ffc5c1; 
+	color: #582a12;
+	text-align: center;
+}
+	</style>
+	<title>Coffee Coupon</title>
+</head>
+<body>
+	<div class="cooldown"> 
+	<p class="pcool" style="font-size:38"><strong>Cool down, wake up!<br>
+	<span style="font-size:60">2-for-1 Cold Beverages</span></strong></p>
+	</div>
+
+	<div class="justprint">
+	<p style="font-size:20"><strong>Just print and present this coupon to double your pleasure</strong></p>
+	<p class="pthrough" style="font-size:14">Through April 25, buy any featured iced or blended coffee beverage and get a 2nd one free.</p>
+
+	<div class="spreadword">
+	<img src="triangle.png" align="right" width="15px" style="margin:15px 15px"><p class="pspread" style="font-size:20"><strong>Spread<br/>the Word!</strong></p>
+	</div>
+	</div>
+
+	<script>
+		function alertprint (print){
+			alert ("Print now!");
+		}
+		
+		setTimeout(function (){
+			alertprint ();
+		}, 5000)
+		
+	</script>
+</body>
