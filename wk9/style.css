@@ -1,0 +1,17 @@
+body{
+	font-family:helvetica;
+	font-size:18pt;
+	line-height:2em;
+	background: url(llama.jpg);
+	font-weight:bolder;
+}
+h1{
+	font-family:Impact;
+	font-size:3em;
+}
+.spread{
+	background-color:plum;
+	padding:50px 150px;
+	margin:100px;
+	opacity:0.6;
+}
