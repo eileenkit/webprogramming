@@ -1,0 +1,33 @@
+[v-cloak]{
+  display:none;
+}
+.odd{
+  background-color:peachpuff;
+}
+body{
+  font-family:"Verdana", sans-serif;
+  margin:100px;
+}
+table{
+  border: 2px solid black;
+  width: 100%;
+}
+caption{
+  font-size:1.5em;
+  text-align:left;
+  padding:20px 0px;
+}
+td, th{
+  padding:10px;
+  text-align:left;
+}
+th{
+  font-size:1.2em;
+}
+h1{
+  font-family:"Georgia", serif;
+  font-size:2.5em;
+}
+img{
+  padding:10px;
+}

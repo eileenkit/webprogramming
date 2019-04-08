@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+  <head>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+    <h1>Collecting State Quarters</h1>
+    <table>
+      <caption>The First Five State Quarters</caption>
+      <thead>
+        <th>State</th>
+        <th>Release Date</th>
+        <th>Iconography</th>
+        <th>Engraver</th>
+        <th>Quarter</th>
+      </thead>
+      <tbody v-for="(state, index) in quarters">
+        <td v-bind:class="{odd:(index+1)%2!==0}">{{state.name}}</td>
+        <td v-bind:class="{odd:(index+1)%2!==0}">{{state.year}}</td>
+        <td v-bind:class="{odd:(index+1)%2!==0}">{{state.icon}}</td>
+        <td v-bind:class="{odd:(index+1)%2!==0}">{{state.engraver}}</td>
+        <td v-bind:class="{odd:(index+1)%2!==0}"><img v-bind:src='state.image'></td>
+      </tbody>
+    <table>  
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
