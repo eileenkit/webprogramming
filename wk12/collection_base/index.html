@@ -1,0 +1,59 @@
+<!doctype html>
+
+<html>
+  <head>
+    <link rel="stylesheet" href="lib/style.css">
+    
+  </head>
+
+  <body>
+   <h1>Video Game Consoles (collected and not collected)</h1>
+   <div id="app">
+    <div class="collectionWrapper">
+            <div class="collectionRow header">
+                    <div class="cell console-manufacturer">Manufacturer</div>
+                    <div class="cell console-name">Console Name</div>
+                    <div class="cell release-date">Console Release Date</div>
+                    <div class="cell collected">Part of the collection</div>
+                </div>
+       <game-container
+       v-for="(console, index) in consoles"
+       v-bind:manufacturer="console.manufacturer"
+       v-bind:name="console.name"
+       v-bind:release-date="console.releaseDate"
+       v-bind:collected="console.collected"
+       v-bind:class='{odd: (index+1) % 2 !== 0, owned: console.collected}'
+       ></game-container>
+    </div>
+    <div id="collection-form">
+      <form v-on:submit.prevent="addConsole">
+        <fieldset>
+          <legend>Add new items to the collection!</legend>
+          <div class="form-group">
+            <label>Manufacturer<input v-model="manufacturerInput" type="text"/></label>
+          </div>
+           <div class="form-group">
+            <label>Console Name<input v-model="nameInput" type="text"/></label>
+          </div>
+           <div class="form-group">
+            <label>Console Release Date<input v-model="dateInput" type="text"/></label>
+          </div>
+          <div class="form-group">
+            <label>Generation<input v-model="generationInput" type="text"/></label>
+          </div>
+          <div class="form-group">
+            <label>ID<input v-model="IdInput" type="text"/></label>
+          </div>
+           <div class="form-group">
+            <label>Part of the collection<input type="radio" name="collected" value="yes" v-model="collectedInput">Yes
+            <input type="radio" name="collected" value="no" v-model="collectedInput">No</label>
+          </div>
+          <button>Add item</button>
+        </fieldset>
+      </form>
+    </div>
+   </div>
+   <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+   <script src="lib/script.js"></script>
+  </body>
+</html>
